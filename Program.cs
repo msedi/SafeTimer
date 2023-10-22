@@ -86,16 +86,13 @@ namespace ipipe.Timers
             _handler = callback ?? throw new ArgumentNullException(nameof(callback));
         }
 
-        /// <summary>
-        /// Starts the timer.
-        /// </summary>
         public void Start(TimeSpan dueTime, TimeSpan duration)
         {
             Change(dueTime, duration);
         }
 
         /// <summary>
-        /// Changes the time when the timer begins and sets the signaling interval.
+        /// Changes the due time when the timer begins and sets the signaling interval.
         /// </summary>
         /// <param name="dueTime"></param>
         /// <param name="duration"></param>
